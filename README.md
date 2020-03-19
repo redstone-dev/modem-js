@@ -31,4 +31,4 @@ Want to contribute? [Leave a pull request](https://github.com/redstone2010/modem
 Encountering bugs? Simply [file an issue](https://github.com/redstone2010/modem-js/issues) describing what happened and we'll fix it!
 
 ### More
-(reserved for later)
+Want to play around with Modem.js? The [`playground` branch](https://github.com/redstone2010/modem-js/tree/playground) is for that.
