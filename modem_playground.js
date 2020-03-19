@@ -1,10 +1,16 @@
 /*
-	Don't download this, download the ZIP file.
+	(i) Hello! Welcome to the Playground version of Modem.js.
+			Here, you're free to experiment with the code and add new things.
+			
+	(!) Don't download this one if you're going to use it for
+			developement. Use the stable release on the master branch
+			instead. (Feel free to remove this)
+	
 */
 
 let Components, Component, Elem, x, y;
 
-const WittyMessages = ["Made in Sublime Text!","*shoots an arrow function out of a bow*","function successfulStartup(){ console.log(this) }",
+/*const WittyMessages = ["Made in Sublime Text!","*shoots an arrow function out of a bow*","function successfulStartup(){ console.log(this) }",
 "This is totally not a witty message :3","It is Wednesday my dudes 🐸",":3","Success on startup!",
 "if (java === javascript){ java.name = javascript.name }","That's a pretty hungry family.","Modem.js is NOT a library, it is a framework!",
 "The developer plays Overwatch.","I'm using a MacBook Air >:3","Are you using Windows?","Made in ES6!","*dancing squidward*",
@@ -13,7 +19,7 @@ const WittyMessages = ["Made in Sublime Text!","*shoots an arrow function out of
 "Celebrating 7 lines of witty messages!", "Soooooo many methods! Also 8 lines of witty messages >:3","Don't use the old Modem.js, which has a class and constructor. Use this one!",
 "Me: 9 lines! Other person: Who has 9 lives? Me: No one does, except cats!", "It is thurrrrzzzdaaayyy my dudes 🐸","It's fri-YAY!", "Me can haz npm reweese? 🥺", "  ||-//", 
 "Cheesecake is good.", "Hey, 10 lines of witty messages!", "Written in just 87 lines of code!", "It's no fair! Minecraft gets all the witty crash reports!"];
-
+*/
 let modem = {
 	// Make a specialised 'log' function
 	log: (str) => console.log("Modem.js | " + str),
@@ -45,7 +51,7 @@ let modem = {
 		Components = [];
 		Component = {};
 		Elem = "";
-		log(WittyMessages[Math.floor(Math.random() * WittyMessages.length)]); // Display a witty message
+		//log(WittyMessages[Math.floor(Math.random() * WittyMessages.length)]);
 	}
 	
 	setElement: (element) => { Elem = getElementByID(element); } // Set the element modem.render() uses to render everything
