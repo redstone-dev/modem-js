@@ -6,8 +6,29 @@ First, clone this repository.
 
 ![Clone this repo](ezgif.com-video-to-gif.gif)
 
+Then, create an `index.html` file with the following code:
+````html
+<div id="YourAppNameHere"></div>
+````
+
+After that, write this in a `.js` file:
+````javascript
+import 'modem_0.4-es.js';
+
+modem.setup();
+modem.setElement("YourAppNameHere");
+````
+Finally, add elements using the `addComponent` method:
+
+````javascript
+modem.addComponent("P", "Hello, World!");
+````
+
 ### Contributing
-(reserved for later)
+Want to contribute? [Leave a pull request](https://github.com/redstone2010/modem-js/pulls) and we'll get to it as soon as possible.
+
+
+Encountering bugs? Simply [file an issue](https://github.com/redstone2010/modem-js/issues) describing what happened and we'll fix it!
 
 ### More
 (reserved for later)
