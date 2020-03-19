@@ -2,8 +2,8 @@
 Welcome to the Modem.js Playground! Here, you can mess around with the JS code —— as long as it's in your own fork of this branch.
 
 ### Challenges
- - **Use Modem's custom component feature to build a web app with easily reusable JS snippets.**
-	
+ - **Use Modem's custom component feature to build a web app with easily reusable JS snippets.** 
+***(Coming soon)***	
 	This doesn't seem tough at all, until you're ***only allowed to use custom components for all the elements in your app***.  
 	Still, this doesn't mean your imagination can run wild. You ***are*** allowed to create anything,
 	after all.
