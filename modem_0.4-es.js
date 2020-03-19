@@ -1,4 +1,7 @@
-// To keep Modem.js under 100 lines, I have transferred the top comment that used to be here to the copyright.txt file.
+/*
+	Don't download this, download the ZIP file.
+*/
+
 let Components, Component, Elem, x, y;
 
 const WittyMessages = ["Made in Sublime Text!","*shoots an arrow function out of a bow*","function successfulStartup(){ console.log(this) }",
@@ -39,13 +42,12 @@ let modem = {
 	}
 
 	setup: () => {
-				Components = [];
-				Component = {};
-				Elem = "";
-				log(WittyMessages[Math.floor(Math.random() * WittyMessages.length)]); // Display a witty message
-		}
-
-
+		Components = [];
+		Component = {};
+		Elem = "";
+		log(WittyMessages[Math.floor(Math.random() * WittyMessages.length)]); // Display a witty message
+	}
+	
 	setElement: (element) => { Elem = getElementByID(element); } // Set the element modem.render() uses to render everything
 
 	addComponent: (component, label, attrib) => { // Create an element to render with modem.render(). The core of modem.js
