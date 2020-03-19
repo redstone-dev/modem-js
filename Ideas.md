@@ -7,7 +7,7 @@ Welcome to the Modem.js Playground! Here, you can mess around with the JS code â
 	This doesn't seem tough at all, until you're ***only allowed to use custom components for all the elements in your app***.  Still, this doesn't mean your imagination can run wild. You ***are*** allowed to create anything, after all.
 
 	> **TIP:** Integrate normal JS with Modem.js for best results.
-- **Make custom attributes using the ModemCreate module and assign them to CSS3 animations.**
+- **Make custom attributes using the ModemCreate module and assign them to CSS3 animations.** ***(Coming soon)***
 
 	A little tricky, but worth it. You might even learn something from this. But here's the catch: you have to do it in 	under 150 lines of JavaScript (not counting the setup code). And you can't minify your code.
 	Wow, a huge challenge!
