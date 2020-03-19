@@ -21,4 +21,4 @@ Welcome to the Modem.js Playground! Here, you can mess around with the JS code â
 	- all `turtle` commands.
 
 
-Well, that's all the challenges. Pick one, and submit it in the Playground repo as a pull request! See you there!
+Well, that's all the challenges. Pick one, and submit as a pull request on the `playground` branch. See you there!
