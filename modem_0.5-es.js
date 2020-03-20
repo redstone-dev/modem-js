@@ -16,13 +16,16 @@ const WittyMessages = ["Made in Sublime Text!","*shoots an arrow function out of
 
 class ModemCore = {
 	constructor() {
+		this.Name = "Modem.js";
+		this.Version = 0.5;
+		this.Description = "";
 		this.modem = {
 			// Make a specialised 'log' function
-			log: (str) => console.log("Modem.js | " + str),
-			err: (str) => console.log("Modem.js | " + str),
+			log: log(str) => console.log("Modem.js | " + str),
+			err: err(str) => console.log("Modem.js | " + str),
 
 			installer: {
-				install: (modules) => {
+				install: install (modules) => {
 					modem.modules = modules;
 					log("Modem.js => Module Installer | Successfully installed these packages:");
 					for (let i = 0; i < modem.modules.length; i++){
@@ -31,36 +34,38 @@ class ModemCore = {
 				},
 
 				getters: {
-					getVersion: (Module) => {
+					get getVersion: getVersion (Module) => {
 						return modules[Module].ver;
 					},
-					getName:  (Module) => {
+					get getName:  getName (Module) => {
 						return modules[Module].nam;
 					},
-					getFile: (Module) => {
+					get getFile: getFile (Module) => {
 						return modules[Module].fil;
 					},	
 				},
 			}
 
-			setup: () => {
+			setup: setup() => {
 				Components = [];
 				Component = {};
 				Elem = "";
 				log(WittyMessages[Math.floor(Math.random() * WittyMessages.length)]); // Display a witty message
 			}
 
-			setElement: (element) => { Elem = getElementByID(element); } // Set the element modem.render() uses to render everything
+			setElement: setElement(element) => { Elem = getElementByID(element); } // Set the element modem.render() uses to render everything
 
-			addComponent: (component, label, attrib) => { // Create an element to render with modem.render(). The core of modem.js
+			addComponent: addComponent(component, label, attrib) => { // Create an element to render with modem.render(). The core of modem.js
 				Component = {
 					name: component,
 					text: label,
-					attributes: []
+					attributes: attrib
 				}
-
-				for (let i = 0; i < attrib.length; i++){
-					Component.attributes.push(attrib[i]);
+				
+				if (attrib !== []){
+					for (let i = 0; i < attrib.length; i++){
+						Component.attributes.push(attrib[i]);
+					}
 				}
 
 				Components.push(component);
