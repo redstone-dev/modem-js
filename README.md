@@ -13,7 +13,7 @@ Then, create an `index.html` file with the following code:
 
 After that, write this in a `.js` file:
 ````javascript
-import 'modem_0.5-es.js';
+import { ModemCore } from 'modem_0.5-es.js';
 
 new ModemCore();
 modem.setup();
