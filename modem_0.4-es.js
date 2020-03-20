@@ -14,73 +14,77 @@ const WittyMessages = ["Made in Sublime Text!","*shoots an arrow function out of
 "Me: 9 lines! Other person: Who has 9 lives? Me: No one does, except cats!", "It is thurrrrzzzdaaayyy my dudes 🐸","It's fri-YAY!", "Me can haz npm reweese? 🥺", "  ||-//", 
 "Cheesecake is good.", "Hey, 10 lines of witty messages!", "Written in just 87 lines of code!", "It's no fair! Minecraft gets all the witty crash reports!"];
 
-let modem = {
-	// Make a specialised 'log' function
-	log: (str) => console.log("Modem.js | " + str),
-	err: (str) => console.log("Modem.js | " + str),
+class ModemCore = {
+	constructor() {
+		this.modem = {
+			// Make a specialised 'log' function
+			log: (str) => console.log("Modem.js | " + str),
+			err: (str) => console.log("Modem.js | " + str),
 
-	installer: {
-		install: (modules) => {
-			modem.modules = modules;
-			log("Modem.js => Module Installer | Successfully installed these packages:");
-			for (let i = 0; i < modem.modules.length; i++){
-				console.log(">" + modem.modules[i]);
+			installer: {
+				install: (modules) => {
+					modem.modules = modules;
+					log("Modem.js => Module Installer | Successfully installed these packages:");
+					for (let i = 0; i < modem.modules.length; i++){
+						console.log(">" + modem.modules[i]);
+					}
+				},
+
+				getters: {
+					getVersion: (Module) => {
+						return modules[Module].ver;
+					},
+					getName:  (Module) => {
+						return modules[Module].nam;
+					},
+					getFile: (Module) => {
+						return modules[Module].fil;
+					},	
+				},
 			}
-		},
 
-		getters: {
-			getVersion: (Module) => {
-				return modules[Module].ver;
-			},
-			getName:  (Module) => {
-				return modules[Module].nam;
-			},
-			getFile: (Module) => {
-				return modules[Module].fil;
-			},	
-		},
-	}
-
-	setup: () => {
-		Components = [];
-		Component = {};
-		Elem = "";
-		log(WittyMessages[Math.floor(Math.random() * WittyMessages.length)]); // Display a witty message
-	}
-	
-	setElement: (element) => { Elem = getElementByID(element); } // Set the element modem.render() uses to render everything
-
-	addComponent: (component, label, attrib) => { // Create an element to render with modem.render(). The core of modem.js
-		Component = {
-			name: component,
-			text: label,
-			attributes: []
-		}
-
-		for (let i = 0; i < attrib.length; i++){
-			Component.attributes.push(attrib[i]);
-		}
-
-		Components.push(component);
-	},
-
-	addAttribute: (componentIndex, attrib) => { Components[componentIndex].attribute.push(attrib) }, // Add attributes
-	$CreateComponentDiv: (num) => {
-		x = document.createElement("DIV");
-		x.id = "Component" + num;
-		Elem.appendChild(x);
-	}
-
-	render: () => {
-		for (let i = 0; i < Components.length; i++) {
-			$CreateComponentDiv(i);
-		}
-
-		for (let j = 0; j < Components.length; j++) {
-			if (Components[j].attributes == [] )
-				document.getElementByID("Component" + j).innerHTML = "<" + Components[j].name + ">" + Components[j].text + "</" + Components[j].name + ">";
-			} else {
-				err("Attributes currently not supported.")	
+			setup: () => {
+				Components = [];
+				Component = {};
+				Elem = "";
+				log(WittyMessages[Math.floor(Math.random() * WittyMessages.length)]); // Display a witty message
 			}
+
+			setElement: (element) => { Elem = getElementByID(element); } // Set the element modem.render() uses to render everything
+
+			addComponent: (component, label, attrib) => { // Create an element to render with modem.render(). The core of modem.js
+				Component = {
+					name: component,
+					text: label,
+					attributes: []
+				}
+
+				for (let i = 0; i < attrib.length; i++){
+					Component.attributes.push(attrib[i]);
+				}
+
+				Components.push(component);
+			},
+
+			addAttribute: (componentIndex, attrib) => { Components[componentIndex].attribute.push(attrib) }, // Add attributes
+			$CreateComponentDiv: (num) => {
+				x = document.createElement("DIV");
+				x.id = "Component" + num;
+				Elem.appendChild(x);
+			}
+
+			render: () => {
+				for (let i = 0; i < Components.length; i++) {
+					$CreateComponentDiv(i);
+				}
+
+				for (let j = 0; j < Components.length; j++) {
+					if (Components[j].attributes == [] )
+						document.getElementByID("Component" + j).innerHTML = "<" + Components[j].name + ">" + Components[j].text + "</" + Components[j].name + ">";
+					} else {
+						err("Attributes currently not supported.")	
+					}
+			}
+		}
 	}
 }
