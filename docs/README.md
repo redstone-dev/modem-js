@@ -13,15 +13,16 @@ Then, create an `index.html` file with the following code:
 
 After that, write this in a `.js` file:
 ````javascript
-import 'modem_0.4-es.js';
+import { ModemCore } from 'modem_0.5-es.js';
 
-modem.setup();
-modem.setElement("YourAppNameHere");
+var x = new ModemCore();
+x.setup();
+x.setElement("YourAppNameHere");
 ````
 Finally, add elements using the `addComponent` method:
 
 ````javascript
-modem.addComponent("P", "Hello, World!");
+x.addComponent("P", "Hello, World!");
 ````
 
 ### Contributing
