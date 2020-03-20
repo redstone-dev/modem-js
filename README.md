@@ -15,7 +15,7 @@ After that, write this in a `.js` file:
 ````javascript
 import { ModemCore } from 'modem_0.5-es.js';
 
-new ModemCore();
+var modem = new ModemCore();
 modem.setup();
 modem.setElement("YourAppNameHere");
 ````
