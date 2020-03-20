@@ -4,7 +4,7 @@ A lightweight JavaScript UI library in under 100 lines of code.
 ### Getting started
 First, clone this repository.
 
-![Clone this repo](../images/ezgif.com-video-to-gif.gif)
+![Clone this repo](ezgif.com-video-to-gif.gif)
 
 Then, create an `index.html` file with the following code:
 ````html
